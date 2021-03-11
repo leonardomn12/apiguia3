@@ -1,0 +1,14 @@
+version: "3.7"
+services:
+  spring: 
+    container_name: apispring
+    image: apiguia3:1.1
+    environment: 
+      - DATABASE_HOST=mysql_container
+      - DATABASE_USER=mysqluser
+      - DATABASE_PASSWORD=secret
+      - DATABASE_NAME=colegio
+      - DATABASE_PORT=13306
+    tty: true
+    ports: 
+      - 8080:8080
